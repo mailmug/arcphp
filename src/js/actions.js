@@ -1,6 +1,8 @@
 export async function setupArcActions() {
     document.addEventListener("click", async (e) => {  
-    if (e.target.hasAttribute("arc:click")) {
+        if (!e.target.hasAttribute("arc:click")) {
+            return;
+        }
         let method = e.target.getAttribute("arc:click");
         let componentEl = e.target.closest("div[id^='cmp_']");
         let id = componentEl.getAttribute("id");
@@ -69,6 +71,5 @@ export async function setupArcActions() {
         let json = await res.json();
 
         Alpine.morph(componentEl, json.html);
-        }
     });
 }
