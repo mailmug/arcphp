@@ -1,0 +1,41 @@
+# Composer dependencies
+/vendor/
+
+# Composer lock (optional for packages)
+composer.lock
+
+# PHPStorm / JetBrains IDE
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache / temp files
+/cache/
+*.cache
+*.tmp
+
+# PHPUnit
+.phpunit.result.cache
+coverage/
+
+# Build / dist files
+/build/
+dist/
+
+# Node (if using npm/yarn for assets)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Env files
+.env
+.env.*

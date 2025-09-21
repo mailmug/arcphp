@@ -1,0 +1,18 @@
+{
+  "name": "arcphp",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "author": "Arshid",
+  "main": "src/js/app.js",
+  "devDependencies": {
+    "esbuild": "^0.25.10"
+  },
+  "dependencies": {
+  },
+  "scripts": {
+    "dev": "esbuild src/js/app.js --bundle --outfile=public/dist/bundle.js --sourcemap --watch --target=chrome58,firefox57,safari11,edge16",
+    "build": "esbuild src/js/app.js --bundle --outfile=public/dist/bundle.js --minify --target=chrome58,firefox57,safari11,edge16",
+    "copy-css": "cp src/style.css public/dist/style.css"
+  }
+}
