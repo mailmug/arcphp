@@ -10,13 +10,14 @@ class Counter extends Component
 
     public function render(): string
     {
-        return "
-        <div id='{$this->id}' x-data arc:component='Counter'>
-            <button arc:click='decrement'>-</button>
-            <span arc:model='count'>{$this->count}</span>
-            <button arc:click='increment'>+</button>
-            <span x-arc-loading.delay.shortest>Shortest delay...</span>
-        </div>
-        ";
+        return <<<HTML
+            <div id='{$this->id}' arc:component='Counter'>
+                <h1>Count: {$this->count}</h1>
+
+                <input type='number' x-arc-model='count' />
+
+                <button x-arc-click='increment'>+ Add Step</button>
+            </div>
+        HTML;
     }
 }

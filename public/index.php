@@ -14,18 +14,16 @@ $counter = new Counter();
 
     <link rel="stylesheet" href="dist/style.css">
 
-     <!-- Alpine.js -->
-   <!-- Alpine Plugins -->
+    <!-- Alpine.js -->
+    <!-- Alpine Plugins -->
 
-       <script src="dist/bundle.js" defer></script>
+         <script src="dist/bundle.js" defer></script>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/morph@3.x.x/dist/cdn.min.js" defer></script>
-        
-        <!-- Alpine Core -->
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/morph@3.x.x/dist/cdn.min.js" defer></script>
+    
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-
-     
     <script>
         document.addEventListener("alpine:init", () => {
             console.log("alpine:init triggered");
