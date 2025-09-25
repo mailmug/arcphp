@@ -3,18 +3,16 @@ import { model  } from "./model";
 import { loading } from "./loading";
 import { click } from "./click";
 import Alpine from "alpinejs";
-
-
-// Alpine.prefix("arc-");
 import morph from '@alpinejs/morph'
  
 window.Alpine = Alpine
 Alpine.plugin(morph)
+Alpine.prefix('arc-');
 
 document.addEventListener('alpine:init', () => {
-    Alpine.directive('arc-model', model); 
-    Alpine.directive('arc-click', click); 
-    Alpine.directive('arc-loading', loading); 
+    Alpine.directive('model', model); 
+    Alpine.directive('click', click); 
+    Alpine.directive('loading', loading); 
 });
 
 document.addEventListener('alpine:init', () => {
@@ -22,7 +20,7 @@ document.addEventListener('alpine:init', () => {
         const comp = component(el);  
         el.__component = comp;       
         comp.init();                
-        el.setAttribute('x-data', `() => __arcComponent($el)`);  
+        el.setAttribute('arc-data', `() => __arcComponent($el)`);  
     });
 });
 
