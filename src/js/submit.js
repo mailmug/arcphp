@@ -34,7 +34,7 @@ export function submit(el, params) {
                 Alpine.morph(componentEl, response.html, {
                     updating(el, toEl) {
                         if(el.value){
-                            el.value = componentEl.__component.state[el.name];
+                            el.value = componentEl.__component.state[el.getAttribute('arc-model')];
                         }
                     }
                 });

@@ -16,7 +16,7 @@ class Counter extends Component
 
                 <h1>Count: {$this->count}</h1>
 
-                <input type='number' arc-model='count' value="{$this->count}" />
+                <input type='number' arc-model='count' />
 
                 <button arc-click='increment'>+ Add Step</button>
                 <span arc-loading.delay.shortest>Shortest delay...</span>

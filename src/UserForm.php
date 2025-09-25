@@ -15,8 +15,8 @@ class UserForm extends Component
         return <<<HTML
             <div arc:component="UserForm" id="cmp_2">
                 <form arc-submit.prevent="save">
-                    <input type="text" name="name" arc-model="name" />
-                    <input type="email" name="email" arc-model="email" />
+                    <input type="text"   arc-model="name" />
+                    <input type="email"  arc-model="email" />
                     <button type="submit">Save</button>
                 </form>
             </div>
