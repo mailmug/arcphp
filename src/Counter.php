@@ -5,7 +5,7 @@ class Counter extends Component
 {
     public $count = 0;
 
-    public function increment() { $this->count++; }
+    public function increment() { sleep(1); $this->count++; }
     public function decrement() { $this->count--; }
 
     public function render(): string
@@ -17,6 +17,8 @@ class Counter extends Component
                 <input type='number' x-arc-model='count' />
 
                 <button x-arc-click='increment'>+ Add Step</button>
+                <span x-arc-loading.delay.shortest>Shortest delay...</span>
+
             </div>
         HTML;
     }

@@ -4,7 +4,7 @@ export function component(el) {
         component: el.dataset.component || null,
         state: {},
 
-        init() { console.log(9)
+        init() { 
             if (el.dataset.state) {
                 this.state = JSON.parse(el.dataset.state);
             }

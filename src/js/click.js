@@ -4,16 +4,21 @@ export function click(el, params) {
     el.addEventListener('click', e => {
         e.preventDefault(); 
 
-        const component = el.closest('[arc\\:component]');
-        if (!component || !component.__component) return;
+        const componentEl = el.closest('[arc\\:component]');
+        if (!componentEl || !componentEl.__component) return;
 
         const payload = {
             action: 'call',
             method: expression,
-            id: component.id,
-            component: component.getAttribute('arc:component'),
-            state: component.__component.state || {},
+            id: componentEl.id,
+            component: componentEl.getAttribute('arc:component'),
+            state: componentEl.__component.state || {},
         };
+
+        let startEvent = new CustomEvent('arc:loading.start', {
+            detail: { component: componentEl.id, method: expression }, bubbles: true
+        });
+        componentEl.dispatchEvent(startEvent);
 
         fetch('arcphp.php', {
             method: 'POST',
@@ -23,12 +28,15 @@ export function click(el, params) {
         .then(res => res.json())
         .then(response => {
             if (response.state) {
-                component.__component.state = response.state;
-                console.log(component.__component);
+                componentEl.__component.state = response.state;
             }
             if (response.html) {
-                Alpine.morph(component, response.html);
+                Alpine.morph(componentEl, response.html);
             }
+            let stopEvent = new CustomEvent('arc:loading.stop', {
+                detail: { component: componentEl.id, method: expression }, bubbles: true
+            });
+            componentEl.dispatchEvent(stopEvent);
         });
     });
 }

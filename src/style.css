@@ -1,6 +1,6 @@
 [x-arc-loading],
 [x-arc-loading\.delay],
 [x-arc-loading\.delay\.shortest],
-[x-arc-loading\.delay\.long] {
+[x-arc-loading\.delay\.longest] {
     display: none;
 }
