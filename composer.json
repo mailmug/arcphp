@@ -1,0 +1,29 @@
+{
+    "name": "mailmug/arcphp",
+    "description": "ArcPHP is a lightweight, reactive PHP component framework (like Livewire, but without Laravel).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["arcphp", "reactive", "php", "livewire without laravel", "components"],
+    "authors": [
+        {
+            "name": "Arshid",
+            "email": "arshidkv12@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arcphp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Arcphp\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    }
+}
