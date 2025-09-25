@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../src/Counter.php';
+require_once __DIR__ . '/../src/UserForm.php';
 
-$counter = new Counter();
+$userForm = new UserForm();
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ $counter = new Counter();
    
 </head>
 <body>
-    <?= $counter->render(); ?>
+    <?= $userForm->render(); ?>
 
     <link rel="stylesheet" href="dist/style.css">
     <script src="dist/bundle.js" defer></script>

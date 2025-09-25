@@ -1,7 +1,7 @@
-export function click(el, params) {
+export function submit(el, params) {
     const expression = params.expression;
 
-    el.addEventListener('click', e => {
+    el.addEventListener('submit', e => {
         e.preventDefault(); 
 
         const componentEl = el.closest('[arc\\:component]');

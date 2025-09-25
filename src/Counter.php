@@ -12,7 +12,8 @@ class Counter extends Component
     public function render(): string
     {
         return <<<HTML
-            <div id='{$this->id}' arc:component='Counter'>
+            <div id='{$this->id}' arc:component='Counter'>       
+
                 <h1>Count: {$this->count}</h1>
 
                 <input type='number' arc-model='count' value="{$this->count}" />

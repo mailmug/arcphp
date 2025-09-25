@@ -1,6 +1,7 @@
 import { component  } from "./component";
 import { model  } from "./model";
 import { loading } from "./loading";
+import { submit } from "./submit";
 import { click } from "./click";
 import Alpine from "alpinejs";
 import morph from '@alpinejs/morph'
@@ -13,6 +14,8 @@ document.addEventListener('alpine:init', () => {
     Alpine.directive('model', model); 
     Alpine.directive('click', click); 
     Alpine.directive('loading', loading); 
+    Alpine.directive('submit', submit);
+
 });
 
 document.addEventListener('alpine:init', () => {
